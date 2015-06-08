@@ -25,7 +25,6 @@
 
 var should = require('should');
 var path = require('path');
-var _ = require('lodash');
 var SwaggerRunner = require('..');
 
 var DEFAULT_PROJECT_ROOT = path.resolve(__dirname, 'assets', 'project');
