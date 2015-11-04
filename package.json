@@ -1,6 +1,6 @@
 {
   "name": "swagger-sails-hook",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Sails.js hook for Swagger projects",
   "keywords": [
     "swagger",
