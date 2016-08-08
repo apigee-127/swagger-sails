@@ -28,6 +28,7 @@ var path = require('path');
 var SwaggerRunner = require('..');
 
 var DEFAULT_PROJECT_ROOT = path.resolve(__dirname, 'assets', 'project');
+var CONTROLLERS_DIR = path.resolve(DEFAULT_PROJECT_ROOT, 'api', 'swagger');
 
 describe('index', function() {
 
@@ -38,11 +39,13 @@ describe('index', function() {
       config: {
         appPath: DEFAULT_PROJECT_ROOT,
         paths: {
-          controllers: DEFAULT_PROJECT_ROOT
+          controllers: CONTROLLERS_DIR
         }
-      }
+      },
+      hooks: {}
     };
     hook = SwaggerRunner(sails);
+    sails.hooks['swagger-sails-hook'] = hook
   });
 
   it('should expose correct properties', function() {
